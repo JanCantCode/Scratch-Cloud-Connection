@@ -16,7 +16,7 @@ async function setupCloud(credentials, project) { // Sends an handshake to the C
 }
 
 async function setCloud(project, variable, value, method) { // sets variable of a project. IMPORTANT: firstly use the setupCloud() function on THAT specific project, else you CAN'T set variables.
-    socket.send((`${JSON.stringify({"method": method, "user": username, "project_id": project, "name": "☁ "+variable, "value":Number(value)})}\n`))
+    socket.send((`${JSON.stringify({"method": method, "user": username, "project_id": project, "name": "☁ "+variable, "value":String(value)})}\n`))
 }
 
 
