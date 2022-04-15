@@ -1,5 +1,7 @@
 const username = require("./config.json").username // takes username and password from config.json and safes it in the username and password variables
 const password = require("./config.json").password
+const request = require("request")
+const ws = require("ws")
 
 async function setupCloud(credentials, project) { // Sends an handshake to the Cloud variable websocket to initialise the connection.
     return new Promise((resolve, reject) => {
