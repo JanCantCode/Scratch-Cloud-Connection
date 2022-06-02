@@ -12,7 +12,7 @@ async function setupCloud(credentials, project) { // Sends an handshake to the C
             }
         })
         socket.addEventListener("open", () => {
-            socket.send(`${JSON.stringify({name: "handshake", "user": username, "project_id": project})}\n`)
+            socket.send(`${JSON.stringify({method: "handshake", "user": username, "project_id": project})}\n`)
         })
     })
 }
@@ -31,6 +31,7 @@ async function login() { // logs into your scratch account with the given login 
           'X-CSRFToken': 'a',
           'Referer': 'https://scratch.mit.edu',
           'Cookie': 'scratchcsrftoken=a;'
+          "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36 OPR/86.0.4363.59"
             },
       body: JSON.stringify({username, password})
     }, (error, response, body) => {
