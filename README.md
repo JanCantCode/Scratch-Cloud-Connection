@@ -27,13 +27,13 @@ login(username, password)``
 This will return your sessionid, csrftoken and x-token (this is unused) in a JSON object.
 You can access it by response.<either sessionid or csrftoken or token>
 _you should use login in an async function and await it._
-´´js
-sendHandshake(credentials, id)``
+ 
+´´´sendHandshake(credentials, id)```
 this will send an handshake to an project with the project id given in the id parameter.
 Make sure to send the credentials argument (fetch it using the login(username, password)) function
 
-´´js
-setVar(name, id, value)``
+ 
+´´´setVar(name, id, value)```
 
 This will set a variable with the name of the name argument, on the project given with the project id argument and to the value from the value argument.
 REMEMBER
@@ -41,12 +41,12 @@ this only works if you have used the sendHandshakre() function previously!
 
 Example code how to use this:
 
-´´js
+´´´js
 async function main() { // its async because we want to use "await"
    let credentials = await login("username", "password") //replace username and password with your username and your password
    await sendHandshake(credentials, "664614661") //replace the numbers with your project id
    await setVar("testvariable", "664614661", 100) //replace testvariable with a variable name of your desire, the numbers with a project id and the 100 with any NUMERIC value.
-   ``
+   ```
 
 
 This will, in that order, firstly create and variable claled "testvariable", then set it to the value 15 and delete it after that.
