@@ -7,7 +7,7 @@ __Important__
 - Use the code in here at your OWN RISK, if you are found using this one someone else's project (theres not really any way to proove it tho), theres a good chance of your account beeing blocked.
 
 
-- If you wan't to contact me or make me fix something, contact me via https://discord.com, my name is ```-Jan-#6059```
+- If you wan't to contact me or make me fix something, contact me via https://discord.gg, my name is ```ItsJan#1214```
 
 
 
